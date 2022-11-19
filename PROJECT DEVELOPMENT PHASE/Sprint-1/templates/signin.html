@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Signin Page</title>
+{% endblock %} 
+
+{% block body %}
+
+{{msg}}
+    
+
+<div class = "loginform">
+    <form action="/fromsignin" method="POST">
+        <div class ="login-title">
+            Sign In
+
+        </div>
+        <div class="login-body">
+        <label>Email</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Password</label><br>
+        <input type="password" name="password" ><br><br>
+
+        <input type="submit" class="btn btn-primary btn-md">
+        <br><br>
+        New User? <a href = "/signup">SignUp</a>
+
+    </div>
+    </form>
+
+</div>
+{% endblock %} 

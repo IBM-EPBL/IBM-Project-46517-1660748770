@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %} {% endblock %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/css/style.css">
+        
+
+    </head>
+    <body>
+        <div class="site-header">
+        <div class = "site-name">
+            <a href="#"> Donor App</a>
+        </div>
+        <div class="logout">
+            <a href="/"> Logout</a>
+        </div>
+    </div>
+    <br>
+<hr>
+          <nav class="stroke">
+            <ul>
+                <li><a href="/home">Home</a></li>
+              <li><a href="/dashboard">Dashboard</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              
+            </ul>
+          </nav>
+          <hr>
+
+        
+        <div class="container"> 
+            {% block body %} {% endblock %}
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>

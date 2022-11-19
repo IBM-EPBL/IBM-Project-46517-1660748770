@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+{% block head %}
+    <title>Contact Us</title>
+{% endblock %} 
+
+
+{% block body %}
+
+<div class = "contact-address">
+<h4>Address</h4>
+<p>VV College Of Engineering, Tisaiyanvilai, Thirunelveli</p>
+</div>
+
+<div class = "contact-phone">
+    <h4>Phone</h4>
+    <p>9999999999</p>
+</div>
+<br>
+<h4 align = "center">{{user}}</h4>
+<div class = "contact-form">
+
+
+        <form action="#" method = "POST">
+      
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="city">City</label>
+          <select id="city" name="city">
+            <option value="chennai">Chennai</option>
+            <option value="coimbatore">Coimbatore</option>
+            <option value="madurai">Madurai</option>
+            <option value="thirunelveli">Thirunelveli</option>
+            <option value="salem">Salem</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" class="btn btn-primary btn-md">
+      
+        </form>
+      
+</div>
+
+{% endblock %} 

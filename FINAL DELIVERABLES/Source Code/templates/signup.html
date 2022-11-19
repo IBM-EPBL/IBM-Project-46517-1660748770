@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Signup Page</title>
+{% endblock %} 
+
+{% block body %}
+
+{{msg}}
+
+    <div class = "loginform" >
+    <form action="/fromsignup" method="POST" onsubmit = "return validate()" name = "signupform">
+        <div class ="login-title">
+            Sign Up
+        </div>
+        <div class="login-body">
+        <label>Name</label><br>
+        <input type="text" name="name"><br>
+        <p id="name-error" class="form-error" >Name is not valid</p>
+        <br>
+        <label>Email</label><br>
+        <input type="email" name = "email" required><br><br>
+
+        <label>Password</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <label>Retype Password</label><br>
+        <input type="password" name="confirmPassword" required><br>
+        
+        <p id="pass2-error" class = "form-error">Passwords do not match</p>
+        
+        <label>I am a:</label><br>
+
+        <label class="radio-button">
+            <input type="radio" name="radio" checked>
+            Beneficiary
+          </label>
+        <br>
+        <label class="radio-button">
+            <input type="radio" name="radio">
+            Donor
+          </label>
+          <br>
+          
+         
+        <br>
+
+        <input type="submit" class="btn btn-primary btn-md">
+
+        <br><br>
+        Already a User? <a href = "/">Login</a>
+    
+    </div>
+
+    </form>
+</div>
+
+<script>
+function validate(){
+    var name = document.signupform.name.value;
+    var email = document.signupform.email.value;
+    var pass = document.signupform.password.value;
+    var pass2 = document.signupform.confirmPassword.value;
+    var value=1;
+    console.log(name);
+    if(name=="" || name==null){
+        document.getElementById('name-error').style.display="block";
+        return false;
+    }
+    if(pass != pass2){
+        document.getElementById('pass2-error').style.display="block";
+        return false;
+    }
+
+
+
+    return true;
+
+}
+
+</script>
+{% endblock %} 
+
+
+
+
+<!--
+pw length- 8 to 15
+name validation
+email validation
+password - uppercase, numbers
+-->
